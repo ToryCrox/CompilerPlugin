@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //支持ARouter的注解
+    implementation 'com.alibaba:arouter-annotation:1.0.4'
+    //google用来支持声明AnnotationProcessor的工具
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+    //用来生成java文件的工具包
+    implementation 'com.squareup:javapoet:1.7.0'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
